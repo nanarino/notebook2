@@ -1,0 +1,27 @@
+:root {
+  --vp-c-indigo-1: #c84de1;
+  --vp-c-indigo-2: #c44bf0;
+  --vp-c-indigo-3: #a223d0;
+  --vp-c-indigo-soft: #8626da;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    #ffafd3 10%,
+    #7f12be 100%
+  );
+}
+
+#VPContent .VPHomeHero .image-bg {
+  transition: opacity 1s;
+  background-image: radial-gradient(transparent 50%, #a84de160);
+  opacity: 0;
+}
+
+#VPContent .VPHomeHero .image-container:hover .image-bg {
+  opacity: 1;
+}
+
+:root.dark {
+  --vp-c-indigo-soft: #b54ce6;
+}
