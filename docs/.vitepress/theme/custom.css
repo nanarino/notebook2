@@ -1,4 +1,12 @@
+@import url(./fonts.css);
+
 :root {
+  --vp-font-family-base: LXGWXiHei, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", miui,
+    "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", LXGWXiHei;
+
   --vp-c-indigo-1: #c84de1;
   --vp-c-indigo-2: #c44bf0;
   --vp-c-indigo-3: #a223d0;
@@ -12,6 +20,10 @@
   );
 }
 
+:root.dark {
+  --vp-c-indigo-soft: #b54ce6;
+}
+
 #VPContent .VPHomeHero .image-bg {
   transition: opacity 1s;
   background-image: radial-gradient(transparent 50%, #a84de160);
@@ -20,8 +32,4 @@
 
 #VPContent .VPHomeHero .image-container:hover .image-bg {
   opacity: 1;
-}
-
-:root.dark {
-  --vp-c-indigo-soft: #b54ce6;
 }

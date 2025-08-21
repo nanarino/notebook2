@@ -18,6 +18,7 @@
   },
   "homepage": "https://nanarino.github.io/notebook2/",
   "devDependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.6",
     "@types/zdog": "^1.1.7",
     "vitepress": "^1.6.4",
     "vue": "^3.5.18",

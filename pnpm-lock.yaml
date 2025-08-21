@@ -11,6 +11,9 @@ importers:
 
   .:
     devDependencies:
+      '@fontsource/jetbrains-mono':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@types/zdog':
         specifier: ^1.1.7
         version: 1.1.7
@@ -279,6 +282,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/jetbrains-mono@5.2.6':
+    resolution: {integrity: sha512-nz//dBr99hXZmHp10wgNI00qThWImkzRR5PQjvRM+rpmuHO5rYBJCqPPWufidCvmkkryXx/GOP/lgqsM3R3Org==}
 
   '@iconify-json/simple-icons@1.2.47':
     resolution: {integrity: sha512-wa/2O7G4sBmwSEWWLh5C+HeY00lVOoWYRKJOYQtk7lAbQrHUReD1ijiGOyTynV1YavxtNueL1CBA1UZmYJfOrQ==}
@@ -1008,6 +1014,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource/jetbrains-mono@5.2.6': {}
 
   '@iconify-json/simple-icons@1.2.47':
     dependencies:

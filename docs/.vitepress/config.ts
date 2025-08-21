@@ -19,7 +19,7 @@ export default defineConfig({
     sidebar: {
       "/elixir/": [
         {
-          text: "feature",
+          text: "Features",
           items: [
             { text: "hello", link: "/elixir/" },
             { text: "basic", link: "/elixir/basic" },
@@ -34,7 +34,7 @@ export default defineConfig({
       ],
       "/gleam/": [
         {
-          text: "feature",
+          text: "Features",
           items: [{ text: "hello", link: "/gleam/" }],
         },
       ],
