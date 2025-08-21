@@ -17,17 +17,17 @@
   - 第一個元素是 atom 时也称 Record
 - function
 
-## COLLECTIONS/ENUMERABLES
+## 集合類型
 
 ### Associative
 
-- Keyword 字面量：`[{k, v},]`，二元元组列表 用 ts 表达相當於 `obj.entries()` key可重复
+- Keyword 字面量：`[{k, v},]`，二元元组列表 用 js 表达相當於 `obj.entries()` key 可重复
   - `{:key, v}` 可以寫成 `key:v` 但得後置 如 `[{:hello, "world"}, foo: "bar"]`
 - Map 字面量：`%{k => v,}` 无序 鍵類型任意
   - `map.hello` 和 `map["hello"]` 獲取值
   - `:key =>` 可以寫成 `key:` 但得後置 如 `%{:hello => "world", foo: "bar"}`
-  - `%{ map | **map }` 用 ts 表达相當於 `Object.assign(o1, o2)` 但鍵若不存在會 `KeyError`
-  - `Map.put(map, key, value)` 添加新 key
+  - `%{ map | **map }` 用 js 表达相當於 `{...o1, ...o2}` 但鍵若不存在會 `KeyError`
+  - `Map.put(map, key, value)` 添加新 key，用 js 表达相當於 `{...o1, key: value}`
 - MapSet 没有字面量 使用 `MapSet.new([1, :two, {"three"}])` 創建
 
 ### Comprehensions
@@ -82,4 +82,30 @@ iex> Enum.map([1,2,3], &:math.sqrt(&1))
 
 iex> Enum.map([1,2,3], &:math.sqrt/1)
 [1.0, 1.4142135623730951, 1.7320508075688772]
+```
+
+## 結構体
+
+```elixir
+defmodule Example.User do
+  defstruct name: "Sean", roles: []
+end
+
+iex> %Example.User{name: "Steve"}
+```
+
+可以和 map 相互匹配
+
+可以用 `alias` 继承另一個結構体
+
+### 協議
+
+```
+defmodule Demo do
+  defstruct name: nil, id: nil
+  # 实现协议
+  defimpl String.Chars do
+    def to_string(term), do: "<Demo##{term.id} name=#{term.name}>"
+  end
+end
 ```
