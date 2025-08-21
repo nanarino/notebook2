@@ -21,7 +21,7 @@ export default defineConfig({
         {
           text: "Features",
           items: [
-            { text: "hello", link: "/elixir/" },
+            { text: "install", link: "/elixir/" },
             { text: "basic", link: "/elixir/basic" },
             { text: "types", link: "/elixir/types" },
             { text: "function", link: "/elixir/function" },
@@ -35,7 +35,10 @@ export default defineConfig({
       "/gleam/": [
         {
           text: "Features",
-          items: [{ text: "hello", link: "/gleam/" }],
+          items: [
+            { text: "install", link: "/gleam/" },
+            { text: "basic", link: "/gleam/basic" },
+          ],
         },
       ],
     },

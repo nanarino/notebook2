@@ -100,7 +100,7 @@ iex> %Example.User{name: "Steve"}
 
 ### 協議
 
-```
+```elixir
 defmodule Demo do
   defstruct name: nil, id: nil
   # 实现协议
@@ -108,4 +108,8 @@ defmodule Demo do
     def to_string(term), do: "<Demo##{term.id} name=#{term.name}>"
   end
 end
+
+iex> demo = %Demo{name: "nanari", id: 1}
+iex> "#{demo}" === "<Demo#1 name=nanari>"
+true
 ```
