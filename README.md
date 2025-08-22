@@ -23,13 +23,6 @@ pnpm docs:dev
 pnpm docs:build
 ```
 
-本地運行可以將配置裡的 base 改為 `'/'`
-
-```diff
-- const base = "/notebook2/"
-+ const base = "/"
-```
-
 ## 借物
 
 封面
