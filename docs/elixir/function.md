@@ -73,9 +73,9 @@ defmodule LinkedList do
 
   def filter([head | tail], f) do
     if f.(head) do
-    [head] ++ filter(tail, f)
+      [head] ++ filter(tail, f)
     else
-    filter(tail, f)
+      filter(tail, f)
     end
   end
 
