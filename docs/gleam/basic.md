@@ -29,7 +29,6 @@ let _is_cool: Bool = True
 const ints: List(Int) = [1, 2, 3]
 
 let _triple = #(1, 2.2, "three")
-<<"Hello, Joe!":utf8>>
 
 // Bit arrays
 let _i8m = <<2147483647>>
