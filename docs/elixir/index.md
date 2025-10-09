@@ -88,9 +88,20 @@ mix --help
 
 ::: danger `size_object: matchstate term not allowed`
 mix 發佈了使用不匹配的 erlang/OTP 版本所編譯而导致
-降低 elixir 到上一個中版本即可 比如 1.17.x 會报错
-在 GitHub 上查詢到 1.16 的最後一個版本後安装：
+降低 elixir 到上一個中版本即可
+
+比如 `1.17.x` 會报错，在 GitHub 上查詢到 `1.16` 的最後一個版本後安装：
+
 `choco install elixir --allow-downgrade -version 1.16.3`
+:::
+
+::: danger `Error loading module v3_core: corrupt atom table`
+卸載 erlang/OTP 舊版本有殘留而导致
+完全卸載後重新安裝：
+
+`choco uninstall erlang`
+
+`choco install elixir --force -y`
 :::
 
 ### 初始化空專案
